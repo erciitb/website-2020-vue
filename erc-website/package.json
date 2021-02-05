@@ -9,7 +9,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "pretty": "prettier --config ./.prettierrc --write \"./**/*.js\"",
-    "push:before" : "npm run pretty && npm run lint"
+    "push:before": "npm run pretty && npm run lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -41,9 +41,11 @@
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged", 
-    "pre-push": "npm run push:before"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run push:before"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [
