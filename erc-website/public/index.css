@@ -1,0 +1,20 @@
+/* Fonts */
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* fonts */
+@font-face {
+  font-family: PrimaryText;
+  src: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+}
+
+/*Azonix remains = primary heading */
+
+@font-face {
+  font-family: SecondaryHeading;
+  src: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Add common styles here */

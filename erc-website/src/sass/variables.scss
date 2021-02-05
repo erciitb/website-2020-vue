@@ -1,0 +1,25 @@
+/*
+Common Sizes of the following things must be defined here. 
+Examples: 
+* font sizes
+* border radius
+* colors
+* some other variables - like px to vh/vw/rem converters
+*/
+
+/* converting px value to vh, vw, rem */
+/* displays 1px when in 1920x1080 screen */
+$px-to-vh: 0.09259259259259259vh;
+$px-to-vw: 0.052083333333333336vw;
+$px-to-rem: 0.0625rem;
+
+/* colors */
+$bg-color-dark: #1c1d21;
+$bg-color: #1f2833;
+$primary-blue: #2c9da5;
+$secondary-blue: #66fcf1;
+$text-color: #ffffff;
+$white: #ffffff;
+
+/* sizes */
+$font-size-16: 8.33333333333333333vw;
