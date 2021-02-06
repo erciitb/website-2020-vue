@@ -1,0 +1,9 @@
+LOG 1:
+  Error: no link for github for: Leena Chaudhari
+  Error: no link for github for: Nitish Agrawal
+  Error: no link for github for: Sai Aneesh Suryadevara
+  Error: no link for linkedIn for: Riya Agrawal
+  Error: no link for linkedIn for: Yash Mitkari
+  Error: no link for github for: Yash Mitkari
+
+  Adding strings with value # for these persons

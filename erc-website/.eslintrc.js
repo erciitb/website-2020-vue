@@ -12,7 +12,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     camelcase: 'warn',
     'prettier/prettier': 'warn',
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'warn'
   },
   overrides: [
     {
