@@ -45,9 +45,11 @@ const getData = (link, defaultValue, loadingValue) => {
     try {
       return data.value
     } catch (err) {
-      if (err.message.includes('null')) return loadingValue
-      // eslint-disable-next-line
-      console.log(err.message)
+      if (err.message.includes('null') || error.value != null) {
+        // eslint-disable-next-line
+        console.log(err.message)
+        return loadingValue
+      }
       return defaultValue
     }
   })

@@ -10,13 +10,12 @@
 <script>
 import { getDataWithParams } from '@/data/scripts'
 import { computed } from 'vue'
+import { QUERY_LINKS } from '@/utils/constants'
 
 export default {
   name: 'About',
   setup() {
-    const { data: teams, error, load } = getDataWithParams(
-      'http://localhost:3000/teams/'
-    )
+    const { data: teams, error, load } = getDataWithParams(QUERY_LINKS.TEAMS)
     load()
     const currentTeam = computed(() => {
       try {
