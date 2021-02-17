@@ -1,7 +1,17 @@
 <template>
   <div class="tabHeadingWrapper">
     <ul>
-      <li v-for="(heading, index) in headings" :key="index">{{ heading }}</li>
+      <li
+        v-for="(heading, index) in headings"
+        :key="index"
+        @click="
+          () => {
+            changeIndex(index)
+          }
+        "
+      >
+        {{ heading }}
+      </li>
     </ul>
   </div>
   <div class="tabsWrapper">
@@ -14,10 +24,8 @@ export default {
   name: 'TabsWrapper',
   props: {
     headings: Array,
-    selectedIndex: {
-      type: Number,
-      default: 0
-    }
+    selectedIndex: Number,
+    changeIndex: Function
   },
   setup() {
     return {}

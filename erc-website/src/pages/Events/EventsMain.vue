@@ -1,6 +1,10 @@
 <template>
   <h1>Events Page</h1>
-  <tabs :headings="tabHeadings" :selectedIndex="selectedIndex">
+  <tabs
+    :headings="tabHeadings"
+    :selectedIndex="selectedIndex"
+    :changeIndex="changeIndex"
+  >
     <tab :index="0" :selectedIndex="selectedIndex">Hello From Tab 1</tab>
     <tab :index="1" :selectedIndex="selectedIndex">Hello From Tab 2</tab>
     <tab :index="2" :selectedIndex="selectedIndex">Hello From Tab 3</tab>
@@ -11,14 +15,18 @@
 <script>
 import Tabs from '@/components/TabView/TabsWrapper.vue'
 import Tab from '@/components/TabView/Tab.vue'
+import { ref } from 'vue'
 
 export default {
   components: { Tabs, Tab },
   setup() {
     const tabHeadings = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']
-    const selectedIndex = 0
+    const selectedIndex = ref(0)
 
-    return { tabHeadings, selectedIndex }
+    const changeIndex = (newIndex) => {
+      selectedIndex.value = newIndex
+    }
+    return { tabHeadings, selectedIndex, changeIndex }
   }
 }
 </script>

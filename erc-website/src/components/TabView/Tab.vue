@@ -1,5 +1,5 @@
 <template>
-  <div class="tabWrapper">
+  <div class="tabWrapper" v-show="index == selectedIndex">
     <slot></slot>
   </div>
 </template>
