@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "pretty": "prettier --config ./.prettierrc --write \"./**/*.js\"",
+    "pretty": "prettier --config ./.prettierrc --write \"./**/*.{js,vue,scss}\"",
     "push:before": "npm run pretty && npm run lint",
     "start-database": "json-server src/data/db.json"
   },

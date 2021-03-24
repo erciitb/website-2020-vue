@@ -21,6 +21,7 @@ body {
   overflow: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background-color: #2c3c4f;
 }
 
 /* removing scrollbar */

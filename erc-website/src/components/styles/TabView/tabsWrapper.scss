@@ -1,0 +1,96 @@
+@use './../../../sass' as *;
+
+#tabsWrapper {
+  color: $text-color;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  font-size: $font-size-16-mobile;
+  
+  user-select: none;
+
+  $tab-heading-height: 8%;
+
+  .tabHeadingWrapper {
+    display: flex;
+    flex: 1;
+    height: $tab-heading-height;
+    width: 95%;
+
+    @include noScrollbar;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    border-radius: $border-radius-small-mobile $border-radius-small-mobile 0 0;
+
+    .tabHeadingList {
+      display: flex;
+      height: 100%;
+
+      .tabHeading {
+        position: relative;
+        height: 100%;
+        width: 6vw;
+        
+        margin: 7 * $px-to-vh 5 * $px-to-vw;
+        padding: 0.01rem 1rem;
+
+        @include centerItems;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        
+        
+        border: $border-size solid $bg-color-dark-primary;
+        border-bottom: none;
+        border-radius: $border-radius-small-mobile $border-radius-small-mobile 0
+          0;
+
+        background-color: $bg-color-primary;
+        
+        transition: all 0.8s ease-in-out;
+        z-index: 1;
+      }
+      .selectedTab {
+        // changing background color and adding shadow highlight
+        background-color: lighten($bg-color-dark-secondary, 8%);
+        box-shadow: 0 0 5 * $px-to-rem 1 * $px-to-rem
+          lighten($secondary-blue, 5%);
+
+        z-index: 10;
+      }
+    }
+  }
+  .displayTabWrapper {
+    width: 100%;
+    height: 100 - $tab-heading-height;
+
+    background-color: rgba($bg-color-dark-secondary, 0.35);
+    border: $border-size solid $bg-color-dark-primary;
+    border-radius: 0 $border-radius-mobile $border-radius-mobile
+      $border-radius-mobile;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #tabsWrapper {
+    font-size: $font-size-20;
+    $tab-heading-height: 9%;
+
+    .tabHeadingWrapper {
+      height: $tab-heading-height;
+      border-radius: $border-radius $border-radius 0 0;
+      .tabHeading {
+        border-radius: $border-radius $border-radius 0 0;
+      }
+    }
+    .displayTabWrapper {
+      height: 100 - $tab-heading-height;
+    }
+  }
+}

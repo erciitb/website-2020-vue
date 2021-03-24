@@ -1,5 +1,8 @@
 <template>
-  <div class="tabWrapper" v-show="index == selectedIndex">
+  <div
+    class="tabWrapper tabsCustomStylesFromParent"
+    v-show="index === selectedIndex"
+  >
     <slot></slot>
   </div>
 </template>
@@ -18,5 +21,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../styles/TabView/tab';
+@use './../styles/TabView/tab';
 </style>
