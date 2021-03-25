@@ -1,6 +1,7 @@
 // Define common mixins here
 @mixin noScrollbar {
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     display: none;
   }

@@ -1,10 +1,12 @@
 <template>
-  <div
-    class="tabWrapper tabsCustomStylesFromParent"
-    v-show="index === selectedIndex"
-  >
-    <slot></slot>
-  </div>
+  <transition name="tabFade">
+    <div
+      class="tabWrapper tabsCustomStylesFromParent"
+      v-show="index === selectedIndex"
+    >
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>

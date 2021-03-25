@@ -11,7 +11,7 @@
   width: 100%;
 
   font-size: $font-size-16-mobile;
-  
+
   user-select: none;
 
   $tab-heading-height: 8%;
@@ -36,7 +36,7 @@
         position: relative;
         height: 100%;
         width: 6vw;
-        
+
         margin: 7 * $px-to-vh 5 * $px-to-vw;
         padding: 0.01rem 1rem;
 
@@ -44,15 +44,14 @@
 
         white-space: nowrap;
         text-overflow: ellipsis;
-        
-        
+
         border: $border-size solid $bg-color-dark-primary;
         border-bottom: none;
         border-radius: $border-radius-small-mobile $border-radius-small-mobile 0
           0;
 
         background-color: $bg-color-primary;
-        
+
         transition: all 0.8s ease-in-out;
         z-index: 1;
       }
@@ -69,6 +68,8 @@
   .displayTabWrapper {
     width: 100%;
     height: 100 - $tab-heading-height;
+
+    position: relative;
 
     background-color: rgba($bg-color-dark-secondary, 0.35);
     border: $border-size solid $bg-color-dark-primary;
