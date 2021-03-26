@@ -27,13 +27,15 @@ $white: #ffffff;
 $font-size-16: 0.833333333333333333vw;
 $font-size-20: $font-size-16 * 1.25;
 $font-size-24: 1.25vw;
-$border-radius: 4 * $px-to-rem;
-$border-radius-small: 3 * $px-to-rem;
+$border-radius: 24 * $px-to-rem;
+$border-radius-small: 16 * $px-to-rem;
 $border-size: 2 * $px-to-rem;
 $shadow-blur: 16 * $px-to-rem;
 
-// for mobile
-$mobile-multiplier: 4;
+// for mobile (<640px)
+$mobile-multiplier: 3.5;
 $font-size-16-mobile: $font-size-16 * $mobile-multiplier;
-$border-radius-mobile: $border-radius * $mobile-multiplier;
-$border-radius-small-mobile: $border-radius-small * $mobile-multiplier;
+
+// for tabs (<960px)
+$tab-multiplier: 2;
+$font-size-16-tab: $font-size-16 * $tab-multiplier;

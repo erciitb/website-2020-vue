@@ -1,5 +1,6 @@
 @use './../../../sass' as *;
 
+// mobile view + other properties
 #tabsWrapper {
   color: $text-color;
 
@@ -26,7 +27,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
 
-    border-radius: $border-radius-small-mobile $border-radius-small-mobile 0 0;
+    border-radius: $border-radius-small $border-radius-small 0 0;
 
     .tabHeadingList {
       display: flex;
@@ -35,10 +36,10 @@
       .tabHeading {
         position: relative;
         height: 100%;
-        width: 6vw;
+        min-width: 6vw;
 
         margin: 7 * $px-to-vh 5 * $px-to-vw;
-        padding: 0.01rem 1rem;
+        padding: 0.01rem 1rem 0.05rem;
 
         @include centerItems;
 
@@ -47,13 +48,14 @@
 
         border: $border-size solid $bg-color-dark-primary;
         border-bottom: none;
-        border-radius: $border-radius-small-mobile $border-radius-small-mobile 0
-          0;
+        border-radius: $border-radius-small $border-radius-small 0 0;
 
         background-color: $bg-color-primary;
 
         transition: all 0.8s ease-in-out;
         z-index: 1;
+
+        backdrop-filter: blur($shadow-blur);
       }
       .selectedTab {
         // changing background color and adding shadow highlight
@@ -73,14 +75,23 @@
 
     background-color: rgba($bg-color-dark-secondary, 0.35);
     border: $border-size solid $bg-color-dark-primary;
-    border-radius: 0 $border-radius-mobile $border-radius-mobile
-      $border-radius-mobile;
+    border-radius: 0 $border-radius $border-radius $border-radius;
+
+    backdrop-filter: blur($shadow-blur);
   }
 }
 
-@media screen and (min-width: 768px) {
+// tab mobile view
+@media screen and (min-width: 40em) {
   #tabsWrapper {
-    font-size: $font-size-20;
+    font-size: $font-size-16-tab;
+  }
+}
+
+// desktop view
+@media screen and (min-width: 60em) {
+  #tabsWrapper {
+    font-size: $font-size-24;
     $tab-heading-height: 9%;
 
     .tabHeadingWrapper {
@@ -89,6 +100,26 @@
       .tabHeading {
         border-radius: $border-radius $border-radius 0 0;
       }
+    }
+    .displayTabWrapper {
+      height: 100 - $tab-heading-height;
+    }
+  }
+}
+
+@media screen and (min-width: 80em) {
+  #tabsWrapper {
+    font-size: $font-size-20;
+  }
+}
+
+// for mobile landscape view
+@media (min-aspect-ratio: 20/9) {
+  #tabsWrapper {
+    $tab-heading-height: 15%;
+
+    .tabHeadingWrapper {
+      height: $tab-heading-height;
     }
     .displayTabWrapper {
       height: 100 - $tab-heading-height;

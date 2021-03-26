@@ -1,21 +1,21 @@
 <template>
   <h1>Events Page</h1>
   <div class="eventTabsWrapper">
-    <tabs
+    <Tabs
       :headings="tabHeadings"
       :selectedIndex="selectedIndex"
       :changeIndex="changeIndex"
     >
-      <tab :index="0" :selectedIndex="selectedIndex">Hello From Tab 1</tab>
-      <tab :index="1" :selectedIndex="selectedIndex">Hello From Tab 2</tab>
-      <tab :index="2" :selectedIndex="selectedIndex">Hello From Tab 3</tab>
-      <tab :index="3" :selectedIndex="selectedIndex">Hello From Tab 4</tab>
-      <tab :index="4" :selectedIndex="selectedIndex">Hello From Tab 5</tab>
-      <tab :index="5" :selectedIndex="selectedIndex">Hello From Tab 6</tab>
-      <tab :index="6" :selectedIndex="selectedIndex">Hello From Tab 7</tab>
-      <tab :index="7" :selectedIndex="selectedIndex">Hello From Tab 8</tab>
-      <tab :index="8" :selectedIndex="selectedIndex">Hello From Tab 9</tab>
-    </tabs>
+      <Tab :index="0" :selectedIndex="selectedIndex">Hello From Tab 1</Tab>
+      <Tab :index="1" :selectedIndex="selectedIndex">Hello From Tab 2</Tab>
+      <Tab :index="2" :selectedIndex="selectedIndex">Hello From Tab 3</Tab>
+      <Tab :index="3" :selectedIndex="selectedIndex">Hello From Tab 4</Tab>
+      <Tab :index="4" :selectedIndex="selectedIndex">Hello From Tab 5</Tab>
+      <Tab :index="5" :selectedIndex="selectedIndex">Hello From Tab 6</Tab>
+      <Tab :index="6" :selectedIndex="selectedIndex">Hello From Tab 7</Tab>
+      <Tab :index="7" :selectedIndex="selectedIndex">Hello From Tab 8</Tab>
+      <Tab :index="8" :selectedIndex="selectedIndex">Hello From Tab 9</Tab>
+    </Tabs>
   </div>
 </template>
 
