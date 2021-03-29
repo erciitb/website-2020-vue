@@ -15,7 +15,7 @@
  * Component used to display the content of a tab
  *
  * Animations have been applied via the tabFade class - appear and disappear in 0.5s
- * Can overwrite/add some CSS to the tab via the tabCustomStylesFromParent class (if defined via ::v-deep)
+ * Can overwrite/add some CSS to the tab via the tabCustomStylesFromParent class (if defined via :deep selector)
  */
 export default {
   name: 'Tab',

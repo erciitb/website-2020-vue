@@ -47,7 +47,7 @@ import { ref } from '@vue/runtime-core'
  * If vertical property is true, the tabs would be vertical. The headings will cover from 17% (desktop) to 30% (mobile) of width of the container
  * If vertical, the tabs have a height between 50px and 85px (converted to vh)
  *
- * Can inherit styles from parent via these classes (if defined via ::v-deep)
+ * Can inherit styles from parent via these classes (if defined via :deep selector)
  *  - tabsContainerCustomStylesFromParent (for full container),
  *  - tabHeadingCustomStylesFromParent (for tab list),
  *  - tabNameCustomStylesFromParent (for individual tabs)

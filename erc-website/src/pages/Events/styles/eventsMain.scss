@@ -8,7 +8,7 @@
   width: 80%;
 
   // example for passing styles
-  ::v-deep .tabsContainerCustomStylesFromParent {
+  :deep(.tabsContainerCustomStylesFromParent) {
     background-color: royalblue;
   }
 }
