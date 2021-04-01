@@ -2,15 +2,20 @@
 
 .cursor {
   display: none;
-  pointer-events: none;
+  
   position: fixed;
+  height: 25 * $px-to-vw;
+  width: 25 * $px-to-vw;
+  min-width: 20px;
+  min-height: 20px;
+  
   background-color: white;
   border-radius: 50%;
-  transition: transform 0.2s ease-out;
+  
   mix-blend-mode: normal;
-  box-sizing: border-box;
-  height: 40 * $px-to-vw;
-  width: 40 * $px-to-vw;
+  pointer-events: none;
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
 }
 
 .enlargedCursor {
@@ -21,8 +26,16 @@
   mix-blend-mode: difference;
 }
 
-@media (min-width:60em) {
+// Showing cursor only when not in mobile mode 
+@media (min-width: 40em) {
   .cursor {
     display: block;
+  }
+}
+
+// hiding cursors when in mobile landscape mode
+@media (min-aspect-ratio: 20/9) {
+  .cursor {
+    display: none;
   }
 }

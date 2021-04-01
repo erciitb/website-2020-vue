@@ -10,13 +10,13 @@ export default {
   name: 'Projects',
   setup() {
     const onClick = () => {
-      store.commit('makeCursorNegative')
+      store.commit('cursor/makeCursorNegative')
     }
     const onMouseEnter = () => {
-      store.commit('makeCursorEnlarged')
+      store.commit('cursor/makeCursorEnlarged')
     }
     const onMouseLeave = () => {
-      store.commit('makeCursorNormal')
+      store.commit('cursor/makeCursorNormal')
     }
     return { onClick, onMouseEnter, onMouseLeave }
   }

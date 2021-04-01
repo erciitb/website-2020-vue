@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
 import Cursor from '@/components/Cursor.vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    Cursor
+    Cursor,
+    Navbar
   }
 }
 </script>

@@ -1,23 +1,11 @@
 import { createStore } from 'vuex'
+import cursorModule from './modules/cursor'
 
 export default createStore({
-  state: {
-    cursorEnlarged: false,
-    cursorNegative: false
-  },
-  mutations: {
-    // for cursors - handling animation
-    makeCursorEnlarged: (state) => {
-      state.cursorEnlarged = true
-    },
-    makeCursorNegative: (state) => {
-      state.cursorNegative = true
-    },
-    makeCursorNormal: (state) => {
-      state.cursorEnlarged = false
-      state.cursorNegative = false
-    }
-  },
+  state: {},
+  mutations: {},
   actions: {},
-  modules: {}
+  modules: {
+    cursor: cursorModule
+  }
 })
