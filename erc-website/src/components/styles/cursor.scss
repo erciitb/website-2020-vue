@@ -1,0 +1,28 @@
+@use './../../sass/variables.scss' as *;
+
+.cursor {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease-out;
+  mix-blend-mode: normal;
+  box-sizing: border-box;
+  height: 40 * $px-to-vw;
+  width: 40 * $px-to-vw;
+}
+
+.enlargedCursor {
+  transform: scale(2.5);
+}
+
+.cursorDifferenceFilter {
+  mix-blend-mode: difference;
+}
+
+@media (min-width:60em) {
+  .cursor {
+    display: block;
+  }
+}
