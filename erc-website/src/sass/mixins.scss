@@ -1,1 +1,14 @@
-// Define common mixins here 
+// Define common mixins here
+@mixin noScrollbar {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

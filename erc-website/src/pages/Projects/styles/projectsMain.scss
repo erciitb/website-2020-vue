@@ -1,0 +1,9 @@
+@use './../../../sass' as *;
+
+.projectTabsWrapper {
+  position: absolute;
+  top: 200 * $px-to-vh;
+  left: 150 * $px-to-vw;
+  height: 768 * $px-to-vh;
+  width: 80%;
+}

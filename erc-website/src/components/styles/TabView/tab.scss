@@ -1,0 +1,25 @@
+@use './../../../sass' as *;
+
+.tabWrapper {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// for animations
+.tabFade-enter-active,
+.tabFade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tabFade-enter-active {
+  transition-delay: 0.5s;
+}
+
+.tabFade-enter-from,
+.tabFade-leave-to {
+  opacity: 0;
+}

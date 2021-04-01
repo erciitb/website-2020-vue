@@ -14,12 +14,28 @@ $px-to-vw: 0.052083333333333336vw;
 $px-to-rem: 0.0625rem;
 
 /* colors */
-$bg-color-dark: #1c1d21;
-$bg-color: #1f2833;
+$bg-color-dark-primary: #1c1d21;
+$bg-color-dark-secondary: #0b0c10;
+$bg-color-primary: #1f2833;
+$bg-color-secondary: #2c3c4f;
 $primary-blue: #2c9da5;
 $secondary-blue: #66fcf1;
 $text-color: #ffffff;
 $white: #ffffff;
 
 /* sizes */
-$font-size-16: 8.33333333333333333vw;
+$font-size-16: 0.833333333333333333vw;
+$font-size-20: $font-size-16 * 1.25;
+$font-size-24: 1.25vw;
+$border-radius: 24 * $px-to-rem;
+$border-radius-small: 16 * $px-to-rem;
+$border-size: 2 * $px-to-rem;
+$shadow-blur: 16 * $px-to-rem;
+
+// for mobile (<640px)
+$mobile-multiplier: 3.5;
+$font-size-16-mobile: $font-size-16 * $mobile-multiplier;
+
+// for tabs (<960px)
+$tab-multiplier: 2;
+$font-size-16-tab: $font-size-16 * $tab-multiplier;
