@@ -24,7 +24,7 @@
  */
 import { computed, onMounted, onUnmounted, ref } from '@vue/runtime-core'
 import store from '@/store'
-import functions from '@/utils/functions'
+import { performance } from '@/utils/functions'
 
 export default {
   name: 'Cursor',
@@ -38,7 +38,7 @@ export default {
     const cursorEnlarged = computed(() => {
       return store.state.cursor.cursorEnlarged
     })
-    const updateCursorValues = (event) => {
+    const updateCursorPosition = (event) => {
       cursorLeft.value =
         event.clientX - cursorElement.value.getBoundingClientRect().width / 2
       cursorTop.value =
@@ -46,17 +46,15 @@ export default {
     }
     // to be called at limit of 80 fps
     const throttleTime = 12.5
-    const debouncedUpdateOfCursor = functions.simpleThrottle(
-      updateCursorValues,
+    const throttledUpdateOfCursor = performance.simpleThrottle(
+      updateCursorPosition,
       throttleTime
     )
     onMounted(() => {
-      window.addEventListener('mousemove', debouncedUpdateOfCursor)
+      window.addEventListener('mousemove', throttledUpdateOfCursor)
     })
     onUnmounted(() => {
-      window.removeEventListener('mousemove', (event) => {
-        debouncedUpdateOfCursor(event)
-      })
+      window.removeEventListener('mousemove', throttledUpdateOfCursor)
     })
     return {
       cursorNegative,

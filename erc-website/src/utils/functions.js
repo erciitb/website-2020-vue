@@ -78,7 +78,7 @@ function throttle(functionToApplyOn, limitTime = 1000) {
   }
 }
 
-export default {
+export const performance = {
   debounce,
   simpleThrottle,
   throttle
