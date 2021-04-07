@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["Events-EventsMain-vue"],{"1d64":function(n,e,t){"use strict";t.r(e);var c=t("7a23"),d=Object(c["A"])("data-v-d1c25dc8"),s=d((function(n,e,t,d,s,u){return Object(c["o"])(),Object(c["d"])("h1",null,"Events Page")})),u={name:"Events",setup:function(){}};t("e368");u.render=s,u.__scopeId="data-v-d1c25dc8";e["default"]=u},"36c6":function(n,e,t){},e368:function(n,e,t){"use strict";t("36c6")}}]);
+//# sourceMappingURL=Events-EventsMain-vue.97e7eb90.js.map
