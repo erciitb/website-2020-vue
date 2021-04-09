@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "pretty": "prettier --config ./.prettierrc --write \"./**/*.js\"",
+    "pretty": "prettier --config ./.prettierrc --write \"./**/*.vue\"",
     "push:before": "npm run pretty && npm run lint",
     "start-database": "json-server src/data/db.json"
   },
@@ -16,6 +16,9 @@
     "concurrently": "^5.3.0",
     "core-js": "^3.6.5",
     "json-server": "^0.16.3",
+    "primeflex": "^2.0.0",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.3.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
