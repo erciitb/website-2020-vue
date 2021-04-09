@@ -2,16 +2,16 @@
 
 .cursor {
   display: none;
-  
+
   position: fixed;
   height: 25 * $px-to-vw;
   width: 25 * $px-to-vw;
   min-width: 20px;
   min-height: 20px;
-  
+
   background-color: white;
   border-radius: 50%;
-  
+
   mix-blend-mode: normal;
   pointer-events: none;
   transform-origin: top left;
@@ -26,7 +26,7 @@
   mix-blend-mode: difference;
 }
 
-// Showing cursor only when not in mobile mode 
+// Showing cursor only when not in mobile mode
 @media (min-width: 40em) {
   .cursor {
     display: block;
